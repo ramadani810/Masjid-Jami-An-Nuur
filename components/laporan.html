@@ -1,0 +1,180 @@
+<!-- SECTION FINANCIAL TRANSPARENCY -->
+<section class="py-10 lg:py-20 bg-slate-50/70 relative overflow-hidden" id="laporan">
+  
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-8 lg:mb-12">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-100/70 border border-emerald-200/50 text-emerald-800 rounded-full text-xs font-semibold mb-3.5 shadow-sm">
+        <i class="fas fa-chart-line text-emerald-600"></i>
+        <span>Transparansi Keuangan</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 mb-3 tracking-tight">
+        Laporan Keuangan Transparan
+      </h2>
+      <p class="text-slate-600 text-xs sm:text-base max-w-xl mx-auto leading-relaxed">
+        Komitmen kami dalam mengelola amanah jamaah. Setiap rupiah donasi Anda dapat dipertanggungjawabkan secara terbuka dan akuntabel.
+      </p>
+    </div>
+
+    <!-- Cards Grid (2-Columns on Mobile, 4-Columns on Desktop) -->
+    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8 lg:mb-12">
+      
+      <!-- 1. Kas Masuk -->
+      <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-100 relative overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <div class="absolute -top-6 -right-6 w-20 sm:w-28 h-20 sm:h-28 bg-emerald-50 rounded-full pointer-events-none"></div>
+        
+        <div class="relative z-10">
+          <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+            <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-emerald-600 text-white flex items-center justify-center shadow-sm shrink-0">
+              <i class="fas fa-wallet text-xs sm:text-lg"></i>
+            </div>
+            <span class="px-2 sm:px-3 py-0.5 sm:py-1 bg-emerald-50 text-emerald-700 border border-emerald-100/80 rounded-lg text-[10px] sm:text-xs font-bold tracking-tight">
+              Kas Masuk
+            </span>
+          </div>
+          
+          <h3 class="text-base sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight mb-0.5 leading-tight">
+            Rp <span id="kas-masuk">847.650.000</span>
+          </h3>
+          <p class="text-slate-500 text-[10px] sm:text-xs mb-3 truncate">Total Pemasukan Juli 2026</p>
+        </div>
+
+        <div class="relative z-10 flex items-center gap-1.5 text-emerald-600 text-[10px] sm:text-xs font-semibold pt-2 border-t border-slate-100/80">
+          <i class="fas fa-arrow-up text-[9px] sm:text-xs"></i>
+          <span class="truncate">+12.5% bln lalu</span>
+        </div>
+      </div>
+
+      <!-- 2. Kas Keluar -->
+      <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-100 relative overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <div class="absolute -top-6 -right-6 w-20 sm:w-28 h-20 sm:h-28 bg-rose-50 rounded-full pointer-events-none"></div>
+        
+        <div class="relative z-10">
+          <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+            <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-rose-600 text-white flex items-center justify-center shadow-sm shrink-0">
+              <i class="fas fa-money-bill-wave text-xs sm:text-lg"></i>
+            </div>
+            <span class="px-2 sm:px-3 py-0.5 sm:py-1 bg-rose-50 text-rose-700 border border-rose-100/80 rounded-lg text-[10px] sm:text-xs font-bold tracking-tight">
+              Kas Keluar
+            </span>
+          </div>
+          
+          <h3 class="text-base sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight mb-0.5 leading-tight">
+            Rp <span id="kas-keluar">625.400.000</span>
+          </h3>
+          <p class="text-slate-500 text-[10px] sm:text-xs mb-3 truncate">Total Pengeluaran Juli 2026</p>
+        </div>
+
+        <div class="relative z-10 flex items-center gap-1.5 text-rose-600 text-[10px] sm:text-xs font-semibold pt-2 border-t border-slate-100/80">
+          <i class="fas fa-arrow-down text-[9px] sm:text-xs"></i>
+          <span class="truncate">-3.2% bln lalu</span>
+        </div>
+      </div>
+
+      <!-- 3. Saldo Kas -->
+      <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-100 relative overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <div class="absolute -top-6 -right-6 w-20 sm:w-28 h-20 sm:h-28 bg-teal-50 rounded-full pointer-events-none"></div>
+        
+        <div class="relative z-10">
+          <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+            <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-teal-600 text-white flex items-center justify-center shadow-sm shrink-0">
+              <i class="fas fa-piggy-bank text-xs sm:text-lg"></i>
+            </div>
+            <span class="px-2 sm:px-3 py-0.5 sm:py-1 bg-teal-50 text-teal-700 border border-teal-100/80 rounded-lg text-[10px] sm:text-xs font-bold tracking-tight">
+              Saldo Kas
+            </span>
+          </div>
+          
+          <h3 class="text-base sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight mb-0.5 leading-tight">
+            Rp <span id="saldo-kas">312.250.000</span>
+          </h3>
+          <p class="text-slate-500 text-[10px] sm:text-xs mb-3 truncate">Saldo Akhir Juli 2026</p>
+        </div>
+
+        <div class="relative z-10 flex items-center gap-1.5 text-teal-600 text-[10px] sm:text-xs font-semibold pt-2 border-t border-slate-100/80">
+          <i class="fas fa-shield-alt text-[9px] sm:text-xs"></i>
+          <span class="truncate">Terverifikasi</span>
+        </div>
+      </div>
+
+      <!-- 4. Penyerapan -->
+      <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-100 relative overflow-hidden flex flex-col justify-between transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+        <div class="absolute -top-6 -right-6 w-20 sm:w-28 h-20 sm:h-28 bg-amber-50 rounded-full pointer-events-none"></div>
+        
+        <div class="relative z-10">
+          <div class="flex items-center justify-between gap-2 mb-3 sm:mb-4">
+            <div class="w-9 h-9 sm:w-12 sm:h-12 rounded-xl bg-amber-500 text-white flex items-center justify-center shadow-sm shrink-0">
+              <i class="fas fa-chart-pie text-xs sm:text-lg"></i>
+            </div>
+            <span class="px-2 sm:px-3 py-0.5 sm:py-1 bg-amber-50 text-amber-700 border border-amber-100/80 rounded-lg text-[10px] sm:text-xs font-bold tracking-tight">
+              Penyerapan
+            </span>
+          </div>
+          
+          <h3 class="text-base sm:text-2xl lg:text-3xl font-extrabold text-slate-900 tracking-tight mb-0.5 leading-tight">
+            73.8<span class="text-xs sm:text-lg">%</span>
+          </h3>
+          <p class="text-slate-500 text-[10px] sm:text-xs mb-3 truncate">Tingkat Penyerapan</p>
+        </div>
+
+        <div class="relative z-10 w-full bg-slate-100 h-1.5 sm:h-2 rounded-full overflow-hidden my-1">
+          <div class="bg-amber-500 h-full rounded-full" style="width: 73.8%"></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Audit & Sertifikasi Area (Full Width Horizontal Bar) -->
+    <div class="bg-white rounded-2xl sm:rounded-3xl p-5 sm:p-7 shadow-sm border border-slate-100">
+      <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+        
+        <!-- Info Audit -->
+        <div class="flex-1">
+          <h3 class="text-base sm:text-xl font-bold text-slate-900 mb-1 flex items-center gap-2">
+            <i class="fas fa-award text-amber-500 text-lg sm:text-xl"></i>
+            <span>Audit &amp; Sertifikasi Organisasi</span>
+          </h3>
+          <p class="text-slate-500 text-xs sm:text-sm">Jaminan transparansi, akuntabilitas, dan kelayakan tata kelola dana jamaah.</p>
+        </div>
+
+        <!-- Badges Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+          
+          <div class="flex items-center gap-3 p-3 bg-slate-50/80 rounded-xl border border-slate-100">
+            <div class="w-8 h-8 rounded-lg bg-emerald-600 text-white flex items-center justify-center shrink-0 text-xs">
+              <i class="fas fa-check"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900">Diaudit KAP</h4>
+              <p class="text-[10px] text-slate-500">Berkala oleh Kemenag/KAP</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 bg-slate-50/80 rounded-xl border border-slate-100">
+            <div class="w-8 h-8 rounded-lg bg-amber-500 text-white flex items-center justify-center shrink-0 text-xs">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900">ISO 9001:2015</h4>
+              <p class="text-[10px] text-slate-500">Standar mutu manajemen</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-3 p-3 bg-slate-50/80 rounded-xl border border-slate-100">
+            <div class="w-8 h-8 rounded-lg bg-teal-600 text-white flex items-center justify-center shrink-0 text-xs">
+              <i class="fas fa-handshake"></i>
+            </div>
+            <div>
+              <h4 class="text-xs font-bold text-slate-900">ZIS Teregister</h4>
+              <p class="text-[10px] text-slate-500">Lembaga resmi terverifikasi</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>

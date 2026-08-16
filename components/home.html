@@ -1,0 +1,116 @@
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden py-8 lg:py-0" id="home">
+  <!-- Background hero -->
+  <div class="hero-background" id="hero-background">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-20 pb-10 w-full">
+    <div class="grid lg:grid-cols-2 gap-6 lg:gap-16 items-center">
+      
+      <!-- KOLOM KIRI: Teks & Informasi Utama -->
+      <div class="text-center lg:text-left flex flex-col items-center lg:items-start">
+        
+        <!-- Badge Welcome -->
+        <div class="hidden lg:inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/60 backdrop-blur-md border border-emerald-500/30 mb-3 max-w-full shadow-lg">
+          <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse shrink-0"></span>
+          <span class="text-emerald-100 text-[10px] sm:text-xs md:text-sm font-medium whitespace-nowrap leading-none">
+            Selamat Datang di Website Resmi Masjid Jami' An-Nuur
+          </span>
+        </div>
+
+        <!-- Judul Utama -->
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-tight lg:leading-none mb-2 sm:mb-3">
+          Masjid Jami'
+          <span class="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-amber-400 to-amber-500 mt-0.5 sm:mt-1">
+            An-Nuur
+          </span>
+        </h1>
+
+        <!-- Ayat Arab -->
+        <p class="text-2xl sm:text-3xl lg:text-4xl font-arabic text-amber-200 my-2 sm:my-3 leading-relaxed lg:leading-loose text-center lg:text-left drop-shadow-md">
+          ﴿ وَبُيُوتٌ فِي النُّورِ ۖ وَأَذَانًا وَقُرْآنًا ﴾
+        </p>
+
+        <!-- Terjemahan Ayat -->
+        <p class="text-emerald-100/90 text-xs sm:text-sm lg:text-base mb-1.5 leading-relaxed max-w-lg font-normal">
+          "Dan (Dia menjadikan) rumah-rumah yang di dalamnya ada cahaya, dan ada pula azan serta (bacaan) Al-Qur'an."
+        </p>
+
+        <!-- Sumber Ayat -->
+        <p class="text-emerald-300/80 text-xs sm:text-sm italic font-medium mb-5">
+          — QS. An-Nuur: 36
+        </p>
+
+        <!-- Tombol Aksi (CTA) -->
+        <div class="flex flex-col sm:flex-row gap-2.5 w-full sm:w-auto max-w-xs sm:max-w-none">
+          <button
+            type="button"
+            class="group bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-400 hover:to-amber-500 text-emerald-950 px-5 py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 hover:scale-105 shadow-xl shadow-amber-500/20 flex items-center justify-center gap-2 cursor-pointer"
+            onclick="document.getElementById('jadwal').scrollIntoView({ behavior: 'smooth' })">
+            <i class="fas fa-clock text-emerald-950"></i>
+            <span>Lihat Jadwal Sholat</span>
+          </button>
+
+          <button
+            type="button"
+            class="border border-white/30 text-white hover:bg-white/10 hover:border-white/60 px-5 py-2 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 backdrop-blur-sm flex items-center justify-center gap-2 cursor-pointer"
+            onclick="document.getElementById('donasi').scrollIntoView({ behavior: 'smooth' })">
+            <i class="fas fa-hand-holding-heart text-amber-300"></i>
+            <span>Tunaikan Infaq</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- WIDGET WAKTU SHOLAT -->
+      <div class="relative w-full max-w-sm sm:max-w-md mx-auto lg:max-w-md mt-4 lg:mt-0">
+        <div class="relative bg-white/10 backdrop-blur-md rounded-2xl lg:rounded-3xl border border-white/20 p-4 lg:p-8 shadow-2xl transition-all duration-300">
+          
+          <!-- Hiasan Bulan (Desktop Only) -->
+          <div class="hidden lg:flex absolute -top-4 -right-4 w-14 h-14 bg-gradient-to-br from-amber-400 to-amber-600 rounded-2xl items-center justify-center shadow-lg shadow-amber-500/30 rotate-12">
+            <i class="fas fa-moon text-white text-xl"></i>
+          </div>
+
+          <!-- INFORMASI TANGGAL -->
+          <div class="text-center lg:text-left mb-3 lg:mb-6">
+            <!-- Tanggal Masehi -->
+            <h3 class="text-white text-base sm:text-lg lg:text-2xl font-bold tracking-wide block" id="masehi-date">
+              Memuat tanggal...
+            </h3>
+            <!-- Tanggal Hijriyah -->
+            <p class="hidden lg:block text-amber-300 text-xs lg:text-sm font-medium mt-0.5" id="hijri-date">
+              Memuat tanggal Hijriyah...
+            </p>
+          </div>
+
+          <!-- KOTAK COUNTDOWN SHOLAT -->
+          <div class="bg-black/30 p-2.5 lg:p-5 rounded-xl lg:rounded-2xl border border-white/10 text-center backdrop-blur-sm flex lg:block items-center justify-between px-4 lg:px-5">
+            
+            <!-- Nama Sholat -->
+            <div class="text-left lg:text-center">
+              <p class="text-[9px] lg:text-[11px] text-emerald-200 uppercase tracking-widest font-semibold">
+                Menuju Sholat
+              </p>
+              <h2 class="text-sm lg:text-2xl font-bold text-amber-400 leading-tight lg:my-1.5" id="next-prayer-name">
+                Memuat...
+              </h2>
+            </div>
+            
+            <!-- Jam Countdown -->
+            <div class="text-right lg:text-center">
+              <div class="text-xl lg:text-4xl font-extrabold text-white tracking-tight leading-none" id="countdown">
+                00:00:00
+              </div>
+              <p class="text-[9px] lg:text-xs text-emerald-200 mt-1">
+                Saat Ini: <span class="font-bold text-white" id="current-time-top">00:00:00</span> WIB
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

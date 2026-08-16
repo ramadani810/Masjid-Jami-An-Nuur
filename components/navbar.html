@@ -1,0 +1,123 @@
+<nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent" id="navbar">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      
+      <!-- Brand Logo & Title -->
+      <div class="flex items-center gap-3">
+        <img alt="Logo Masjid An-Nuur" class="w-14 h-14 rounded-full object-cover" src="images/logo3.png" />
+        <div>
+          <h1 class="text-white font-bold text-lg lg:text-xl leading-tight">
+            Masjid Jami' An-Nuur
+          </h1>
+          <p class="text-emerald-100 text-xs lg:text-sm">
+            <span class="block lg:hidden">أَهْلًا وَسَهْلًا</span>
+            <span class="hidden lg:inline">أَهْلًا وَسَهْلًا</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Desktop Navigation Menu -->
+      <div class="hidden lg:flex items-center gap-7">
+        <a class="text-white hover:text-amber-300 transition-colors font-medium nav-link" href="#home">Beranda</a>
+        
+        <!-- DROPDOWN JADWAL -->
+        <div class="relative group">
+          <button class="text-white hover:text-amber-300 transition-colors font-medium flex items-center gap-1.5 py-2 focus:outline-none">
+            <span>Jadwal</span>
+            <i class="fas fa-chevron-down text-[10px] transition-transform group-hover:rotate-180"></i>
+          </button>
+          
+          <!-- Dropdown Card Container -->
+          <div class="absolute left-0 top-full hidden group-hover:block w-52 bg-emerald-950/95 border border-emerald-800/80 rounded-2xl shadow-2xl py-2 z-50 backdrop-blur-md">
+            <a href="#jadwal" class="flex items-center gap-2.5 px-4 py-2.5 text-xs text-emerald-100 hover:bg-emerald-900 hover:text-amber-300 transition-colors">
+              <i class="fas fa-clock text-amber-400 w-4"></i>
+              <span>Jadwal Sholat</span>
+            </a>
+            <a href="#khotib-jumat" class="flex items-center gap-2.5 px-4 py-2.5 text-xs text-emerald-100 hover:bg-emerald-900 hover:text-amber-300 transition-colors">
+              <i class="fas fa-user-tie text-amber-400 w-4"></i>
+              <span>Khotib &amp; Bilal Jumat</span>
+            </a>
+          </div>
+        </div>
+
+        <a class="text-white hover:text-amber-300 transition-colors font-medium nav-link" href="#donasi">Infaq &amp; Shadaqah</a>
+        <a class="text-white hover:text-amber-300 transition-colors font-medium nav-link" href="#agenda">Agenda</a>
+        <a class="text-white hover:text-amber-300 transition-colors font-medium nav-link" href="#laporan">Laporan Keuangan</a>
+        <a class="text-white hover:text-amber-300 transition-colors font-medium nav-link" href="#lokasi">Lokasi</a>
+
+        <button class="bg-amber-500 hover:bg-amber-400 text-emerald-900 px-6 py-2.5 rounded-full font-semibold transition-all hover:scale-105 shadow-lg" onclick="document.getElementById('donasi').scrollIntoView({ behavior: 'smooth' })">
+          <i class="fas fa-heart mr-2"></i>Infaq Sekarang
+        </button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="lg:hidden text-white text-2xl p-2" id="mobile-menu-btn">
+        <i class="fas fa-bars"></i>
+      </button>
+
+    </div>
+  </div>
+
+  <!-- MOBILE SIDE MENU OVERLAY & CONTAINER -->
+  <div id="mobile-overlay" class="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998] opacity-0 pointer-events-none transition-all duration-300"></div>
+
+  <div id="mobile-menu" class="fixed top-0 right-0 h-screen w-[80%] max-w-sm bg-emerald-950 z-[9999] shadow-2xl translate-x-full transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto">
+    <div class="flex items-center justify-between px-5 py-5 border-b border-emerald-800">
+      <div class="flex items-center gap-3">
+        <img src="images/logo3.png" alt="Logo Masjid An-Nuur" class="w-11 h-11 rounded-full object-cover" />
+        <div>
+          <h2 class="text-white font-bold text-sm">Masjid Jami' An-Nuur</h2>
+          <p class="text-emerald-300 text-xs">أَهْلًا وَسَهْلًا</p>
+        </div>
+      </div>
+      <button id="mobile-menu-close" class="w-10 h-10 rounded-full bg-white/10 text-white flex items-center justify-center hover:bg-white/20 transition" aria-label="Tutup menu">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Navigation Links -->
+    <div class="px-5 py-6 space-y-2">
+      <a href="#home" class="mobile-link flex items-center gap-3 text-white hover:text-amber-300 hover:bg-emerald-900 px-4 py-3 rounded-xl transition">
+        <i class="fas fa-home w-5"></i>
+        <span>Beranda</span>
+      </a>
+
+      <a href="#jadwal" class="mobile-link flex items-center gap-3 text-white hover:text-amber-300 hover:bg-emerald-900 px-4 py-3 rounded-xl transition">
+        <i class="fas fa-clock w-5"></i>
+        <span>Jadwal Sholat</span>
+      </a>
+
+      <a href="#khotib-jumat" class="mobile-link flex items-center gap-3 text-white hover:text-amber-300 hover:bg-emerald-900 px-4 py-3 rounded-xl transition">
+        <i class="fas fa-user-tie w-5"></i>
+        <span>Khotib &amp; Bilal Jumat</span>
+      </a>
+
+      <a href="#donasi" class="mobile-link flex items-center gap-3 text-white hover:text-amber-300 hover:bg-emerald-900 px-4 py-3 rounded-xl transition">
+        <i class="fas fa-heart w-5"></i>
+        <span>Infaq &amp; Shadaqah</span>
+      </a>
+
+      <a href="#agenda" class="mobile-link flex items-center gap-3 text-white hover:text-amber-300 hover:bg-emerald-900 px-4 py-3 rounded-xl transition">
+        <i class="fas fa-calendar-alt w-5"></i>
+        <span>Agenda</span>
+      </a>
+
+      <a href="#laporan" class="mobile-link flex items-center gap-3 text-white hover:text-amber-300 hover:bg-emerald-900 px-4 py-3 rounded-xl transition">
+        <i class="fas fa-chart-line w-5"></i>
+        <span>Laporan Keuangan</span>
+      </a>
+
+      <a href="#lokasi" class="mobile-link flex items-center gap-3 text-white hover:text-amber-300 hover:bg-emerald-900 px-4 py-3 rounded-xl transition">
+        <i class="fas fa-map-marker-alt w-5"></i>
+        <span>Lokasi</span>
+      </a>
+
+      <div class="pt-4">
+        <button class="w-full bg-amber-500 hover:bg-amber-400 text-emerald-950 px-6 py-3 rounded-full font-semibold transition-all" onclick="document.getElementById('donasi').scrollIntoView({ behavior: 'smooth' })">
+          <i class="fas fa-heart mr-2"></i>
+          Infaq Sekarang
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

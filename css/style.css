@@ -1,0 +1,608 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --emerald-50: #ecfdf5;
+    --emerald-100: #d1fae5;
+    --emerald-500: #10b981;
+    --emerald-600: #059669;
+    --emerald-700: #047857;
+    --emerald-800: #065f46;
+    --emerald-900: #064e3b;
+    --emerald-950: #022c22;
+    --amber-300: #fcd34d;
+    --amber-400: #fbbf24;
+    --amber-500: #f59e0b;
+    --amber-600: #d97706;
+}
+
+* {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #064e3b;
+}
+
+.font-arabic {
+    font-family: 'Amiri', serif;
+    direction: rtl;
+}
+
+.hero-pattern {
+    background-image: 
+        radial-gradient(circle at 20% 50%, rgba(16, 185, 129, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 35px,
+            rgba(16, 185, 129, 0.05) 35px,
+            rgba(16, 185, 129, 0.05) 70px
+        ),
+        repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 35px,
+            rgba(251, 191, 36, 0.03) 35px,
+            rgba(251, 191, 36, 0.03) 70px
+        );
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+}
+
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.count-up {
+    animation: countUp 0.6s ease-out;
+}
+
+.navbar-scrolled {
+    background: linear-gradient(135deg, rgba(6, 78, 59, 0.95) 0%, rgba(4, 120, 87, 0.95) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.prayer-card.active {
+    transform: scale(1.02);
+    box-shadow: 0 20px 40px rgba(16, 185, 129, 0.2);
+}
+
+.prayer-card.active::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 1rem;
+    padding: 2px;
+    background: linear-gradient(135deg, #10b981, #fbbf24, #10b981);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: glow-border 3s ease-in-out infinite;
+}
+
+@keyframes glow-border {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+.nominal-btn.selected {
+    background: linear-gradient(135deg, #e9e624dc 0%, #9ff501 100%);
+    color: rgb(248, 0, 186);
+    border-color: #059669;
+    transform: scale(1.02);
+    box-shadow: 0 10px 25px rgba(2, 255, 57, 0.562);
+}
+
+.donation-category-btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.donation-category-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transition: left 0.6s;
+}
+
+.donation-category-btn:hover::before {
+    left: 100%;
+}
+
+.agenda-card {
+    transition: all 0.3s ease;
+}
+
+.agenda-card.hide {
+    display: none;
+}
+
+.filter-tab {
+    transition: all 0.3s ease;
+}
+
+#back-to-top.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+input[type="radio"] {
+    accent-color: #059669;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%23059669' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.75rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+#donation-modal.open {
+    display: flex;
+}
+
+#modal-content.open {
+    opacity: 1;
+    transform: scale(1);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #ecfdf5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #059669, #047857);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #10b981, #059669);
+}
+
+@media (max-width: 640px) {
+    .text-5xl {
+        font-size: 2.5rem;
+    }
+    .text-6xl {
+        font-size: 3rem;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* =========================================================
+   HERO BACKGROUND DINAMIS
+========================================================= */
+
+#home {
+    position: relative;
+    isolation: isolate;
+}
+
+
+/*
+    Layer background.
+
+    JavaScript akan mengubah
+    background-image elemen ini.
+*/
+
+.hero-background {
+    position: absolute;
+
+    inset: 0;
+
+    z-index: -2;
+
+    background-color: #064e3b;
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    transition:
+        background-image 0.8s ease-in-out;
+}
+
+
+/*
+    Overlay gelap.
+
+    Tujuannya supaya tulisan putih
+    tetap terbaca meskipun gambar terang.
+*/
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.1),  /* Atas tipis 10% */
+        rgba(45, 65, 45, 0.5)   /* Bawah 50% */
+    );
+}
+
+
+/* =========================================================
+   SECTION REVEAL
+========================================================= */
+
+.section-hidden {
+    opacity: 0;
+
+    transform:
+        translateY(30px);
+}
+
+
+.section-visible {
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+
+/* =========================================================
+   PRAYER CARD AKTIF
+========================================================= */
+
+.prayer-card.active {
+    transform: scale(1.02);
+
+    box-shadow:
+        0 20px 40px
+        rgba(16, 185, 129, 0.25);
+}
+
+
+/* =========================================================
+   RESPONSIVE HERO
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .hero-background {
+        background-position:
+            center center;
+    }
+
+}   
+
+/* =====================================================
+   BACKGROUND HERO DINAMIS
+   Background diganti oleh JavaScript sesuai jam
+===================================================== */
+
+#home {
+    position: relative;
+    isolation: isolate;
+}
+
+.hero-background {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background-color: #064e3b;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: background-image 0.8s ease-in-out;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.70)
+        );
+}
+
+.nominal-btn.selected {
+    border-color: rgb(16 185 129);
+    background-color: rgb(236 253 245);
+    color: rgb(6 95 70);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+/* =========================================================
+   DONASI - RESPONSIVE QRIS
+   ---------------------------------------------------------
+   Menjaga modal tetap berada di dalam layar pada desktop,
+   tablet, dan HP dengan tinggi layar yang berbeda.
+========================================================= */
+
+#donation-modal {
+    padding: 0.75rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    overscroll-behavior: contain;
+}
+
+#donation-modal > div {
+    width: 100%;
+    max-width: 420px;
+    max-height: calc(100vh - 1.5rem);
+    overflow-y: auto;
+    scrollbar-width: thin;
+}
+
+/* Ukuran QRIS utama. */
+.donation-qris-image {
+    width: min(260px, 70vw);
+    height: auto;
+    max-height: 42vh;
+}
+
+/* Status nominal yang sedang dipilih. */
+.nominal-btn.selected {
+    border-color: rgb(16 185 129) !important;
+    background-color: rgb(236 253 245) !important;
+    color: rgb(6 95 70) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.15);
+}
+
+/* Tablet dan HP. */
+@media (max-width: 640px) {
+
+    #donation-modal {
+        padding: 0.5rem;
+    }
+
+    #donation-modal > div {
+        max-height: calc(100vh - 1rem);
+        border-radius: 1.25rem;
+    }
+
+    .donation-qris-image {
+        width: min(220px, 62vw);
+        max-height: 34vh;
+    }
+}
+
+/* HP kecil. */
+@media (max-width: 380px) {
+
+    #donation-modal > div {
+        border-radius: 1rem;
+    }
+
+    .donation-qris-image {
+        width: 175px;
+        max-height: 30vh;
+    }
+
+    #donation-modal .p-5,
+    #donation-modal .p-6 {
+        padding: 1rem;
+    }
+}
+
+/* Layar sangat pendek: QRIS sedikit diperkecil agar tombol tetap terlihat. */
+@media (max-height: 700px) {
+
+    .donation-qris-image {
+        width: min(200px, 52vw);
+        max-height: 30vh;
+    }
+}
+
+/* Tombol donasi tetap mudah disentuh di perangkat mobile. */
+#donation-modal button,
+.nominal-btn,
+.donation-category-btn {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* =========================================================
+   ACTIVE NAVIGATION
+   Menandai section yang sedang aktif
+========================================================= */
+
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Warna teks saat section aktif */
+.nav-link.active {
+    color: #fbbf24 !important;
+}
+
+/* Garis indikator di bawah menu */
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -8px;
+    height: 3px;
+    border-radius: 999px;
+    background: #fbbf24;
+    transform: scaleX(1);
+    transition: transform 0.3s ease;
+}
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+.mobile-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+/* Menu mobile yang aktif */
+.mobile-link.active {
+    color: #F09700  !important;
+    background: rgba(0, 0, 0, 0.459)
+}
+
+/* Indikator kiri */
+.mobile-link.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 20%;
+    bottom: 20%;
+    width: 4px;
+    border-radius: 999px;
+    background: #F09700;
+}
+
+/* Icon ikut berubah warna */
+.mobile-link.active i {
+    color: #F09700;
+}
+
+/* =========================================================
+   FIX FILTER AGENDA - MOBILE
+   ========================================================= */
+
+.filter-tab {
+    color: #064e3b !important;
+    font-weight: 600;
+    -webkit-text-fill-color: #064e3b;
+}
+
+.filter-tab.active {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff;
+}
+
+/* Warna teks berdasarkan kategori */
+.filter-tab[data-filter="all"] {
+    color: #064e3b !important;
+    -webkit-text-fill-color: #064e3b;
+}
+
+.filter-tab[data-filter="kajian"] {
+    color: #047857 !important;
+    -webkit-text-fill-color: #047857;
+}
+
+.filter-tab[data-filter="jumat"] {
+    color: #b45309 !important;
+    -webkit-text-fill-color: #b45309;
+}
+
+.filter-tab[data-filter="sosial"] {
+    color: #0f766e !important;
+    -webkit-text-fill-color: #0f766e;
+}
+
+/* Saat aktif */
+.filter-tab.bg-emerald-700 {
+    color: white !important;
+    -webkit-text-fill-color: white !important;
+}
+
+/* Icon juga dipastikan terlihat */
+.filter-tab i {
+    color: inherit !important;
+    -webkit-text-fill-color: inherit !important;
+}
+
+/* Styling Indikator Aktif */
+.nav-item.active-link {
+  color: #fcd34d !important; /* amber-300 */
+}
+
+.nav-item.active-link .active-indicator {
+  width: 100% !important;
+}
+
+/* Submenu Active Styling */
+.dropdown-item.active-sublink {
+  background-color: #064e3b !important; /* emerald-900 */
+  color: #fcd34d !important;
+  font-weight: 600;
+}
+
+.dropdown-item.active-sublink .active-dot {
+  opacity: 1 !important;
+}
+
+/* Mobile Active Styling */
+.mobile-nav-link.active-mobile {
+  background-color: #064e3b !important;
+  color: #fcd34d !important;
+  font-weight: 600;
+}
+
+/* Membuat semua skrol di halaman web menjadi halus secara global */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Memastikan perubahan warna teks dan garis bawah pada menu tidak kaku */
+.nav-link, 
+.mobile-link, 
+.group button, 
+.group .absolute a {
+  transition: all 0.3s ease-in-out !important;
+}

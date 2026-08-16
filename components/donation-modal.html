@@ -1,0 +1,52 @@
+<div id="donation-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center bg-slate-900/60 backdrop-blur-sm p-4">
+  <div class="relative w-full max-w-sm bg-white rounded-3xl shadow-2xl overflow-hidden animate-in fade-in zoom-in duration-200">
+    
+    <!-- Modal Header -->
+    <div class="relative bg-emerald-900 p-6 text-center text-white">
+      <button type="button" id="close-donation-modal" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition">
+        <i class="fas fa-times text-sm"></i>
+      </button>
+      <div class="w-12 h-12 mx-auto mb-2.5 rounded-2xl bg-white/10 flex items-center justify-center border border-white/10">
+        <i class="fas fa-qrcode text-xl text-emerald-200"></i>
+      </div>
+      <h3 class="text-lg font-bold">Scan QRIS Donasi</h3>
+      <p class="text-xs text-emerald-200/80 mt-0.5">Masjid Jami' An-Nuur</p>
+    </div>
+
+    <!-- Modal Body -->
+    <div class="p-6">
+      
+      <!-- Ringkasan Transaksi -->
+      <div class="bg-slate-50 border border-slate-100 rounded-2xl p-3.5 mb-5 space-y-2">
+        <div class="flex justify-between items-center text-xs">
+          <span class="text-slate-400">Tujuan Donasi</span>
+          <span id="modal-donation-category" class="font-bold text-slate-700">Pembangunan</span>
+        </div>
+        <div class="flex justify-between items-center text-xs pt-1 border-t border-slate-200/60">
+          <span class="text-slate-400">Total Nominal</span>
+          <span id="modal-donation-amount" class="font-extrabold text-emerald-700 text-sm">Rp0</span>
+        </div>
+      </div>
+
+      <!-- Image QRIS -->
+      <div class="text-center">
+        <div class="p-3 bg-white rounded-2xl border border-slate-200 shadow-xs inline-block">
+          <img src="images/qr2.jpeg" alt="QRIS Masjid An-Nuur" class="w-56 h-56 object-contain rounded-xl"/>
+        </div>
+        <p class="text-xs text-slate-400 mt-3 leading-relaxed">
+          Gunakan kamera BCA, Mandiri, GoPay, OVO, Dana, atau e-wallet lainnya untuk memindai.
+        </p>
+      </div>
+
+      <!-- Action Button -->
+      <button type="button" id="donation-confirm-btn" class="w-full mt-5 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm transition-all active:scale-[0.98] flex items-center justify-center gap-2 shadow-sm">
+        <i class="fab fa-whatsapp text-lg"></i>
+        <span>Konfirmasi via WhatsApp</span>
+      </button>
+      
+      <p class="text-center text-[11px] text-slate-400 mt-2.5">
+        Klik konfirmasi setelah transfer berhasil.
+      </p>
+    </div>
+  </div>
+</div>

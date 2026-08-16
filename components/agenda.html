@@ -1,0 +1,174 @@
+<section class="py-16 md:py-24 bg-slate-50/60 relative overflow-hidden" id="agenda">
+  <!-- Glow Background -->
+  <div class="absolute top-1/3 right-0 w-80 h-80 bg-emerald-100/40 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-8 sm:mb-10">
+      <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-emerald-100/80 text-emerald-800 text-xs font-semibold tracking-wide mb-3">
+        <i class="fas fa-calendar-alt text-emerald-600"></i>
+        <span>Agenda &amp; Kegiatan</span>
+      </span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 tracking-tight">
+        Jadwal Kegiatan Masjid
+      </h2>
+      <p class="text-slate-500 text-xs sm:text-sm max-w-lg mx-auto mt-2 leading-relaxed">
+        Ikuti berbagai agenda keagamaan dan sosial yang diselenggarakan di Masjid An-Nuur.
+      </p>
+    </div>
+
+    <!-- Filter Buttons (Dibuat Pas di Tengah / Center untuk Mobile & Desktop) -->
+    <div class="flex items-center justify-center flex-wrap gap-2 mb-8 w-full pb-2 pt-1 px-1 scrollbar-none">
+      
+      <!-- Tombol Semua (Tema Hijau/Emerald) -->
+      <button type="button" class="filter-tab active shrink-0 px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-700 font-medium text-xs transition-all active:scale-95 whitespace-nowrap bg-white [&.active]:bg-emerald-700 [&.active]:text-white [&.active]:border-emerald-700" data-filter="all">
+        <span class="pointer-events-none">Semua</span>
+      </button>
+
+      <!-- Tombol Kajian (Tema Hijau/Emerald) -->
+      <button type="button" class="group filter-tab shrink-0 px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-700 font-medium text-xs transition-all active:scale-95 flex items-center gap-1.5 whitespace-nowrap bg-white [&.active]:bg-emerald-700 [&.active]:text-white [&.active]:border-emerald-700" data-filter="kajian">
+        <i class="fas fa-book-open text-emerald-600 group-[.active]:text-white pointer-events-none transition-colors"></i>
+        <span class="pointer-events-none">Kajian</span>
+      </button>
+
+      <!-- Tombol Jumat (Tema Cokelat/Amber) -->
+      <button type="button" class="group filter-tab shrink-0 px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:border-amber-500 hover:text-amber-700 font-medium text-xs transition-all active:scale-95 flex items-center gap-1.5 whitespace-nowrap bg-white [&.active]:bg-amber-600 [&.active]:text-white [&.active]:border-amber-600" data-filter="jumat">
+        <i class="fas fa-mosque text-amber-600 group-[.active]:text-white pointer-events-none transition-colors"></i>
+        <span class="pointer-events-none">Jumat</span>
+      </button>
+
+      <!-- Tombol Sosial (Tema Tosca/Teal) -->
+      <button type="button" class="group filter-tab shrink-0 px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:border-teal-500 hover:text-teal-700 font-medium text-xs transition-all active:scale-95 flex items-center gap-1.5 whitespace-nowrap bg-white [&.active]:bg-teal-600 [&.active]:text-white [&.active]:border-teal-600" data-filter="sosial">
+        <i class="fas fa-hands-helping text-teal-600 group-[.active]:text-white pointer-events-none transition-colors"></i>
+        <span class="pointer-events-none">Sosial</span>
+      </button>
+
+    </div>
+
+    <!-- Mini Cards Grid Container -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4 mb-10" id="agenda-grid">
+      
+      <!-- KOTAK KECIL 1: KAJIAN & JUMAT 1 (Tafsir Jalalain) -->
+      <div class="agenda-card group" data-category="kajian">
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-emerald-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-3">
+              <div class="flex items-center gap-1.5">
+                <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">SETIAP SENIN</span>
+              </div>
+              <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-semibold text-[10px]">
+                Kajian
+              </span>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-slate-800 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug mb-1.5">
+              Hadis Riyadlus Shalihin 
+            </h3>
+            <p class="text-[11px] text-slate-500 line-clamp-2 leading-relaxed mb-3">
+             Berpusat pada pemahaman Hadits dan penerapannya dalam kehidupan sehari-hari.
+            </p>
+          </div>
+          <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400 flex items-center gap-1">
+              <i class="fas fa-clock text-amber-500 text-[10px]"></i> 18:00 WIB
+            </span>
+            <!-- <button type="button" class="font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-0.5 text-[11px]">
+              Detail <i class="fas fa-chevron-right text-[8px]"></i>
+            </button> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- KOTAK KECIL 2: JUMAT 2 (jumatt kliwon) -->
+      <div class="agenda-card group" data-category="jumat">
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-amber-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-3">
+              <div class="flex items-center gap-1.5">
+                <span class="text-xs font-extrabold text-amber-600 uppercase tracking-wider">SETIAP JUMAT KLIWON</span>
+              </div>
+              <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 font-semibold text-[10px]">
+                Jumat
+              </span>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-slate-800 line-clamp-2 group-hover:text-amber-600 transition-colors leading-snug mb-1.5">
+              Tafsir Jalalain 
+            </h3>
+            <p class="text-[11px] text-slate-500 line-clamp-2 leading-relaxed mb-3">
+              Tafsir Al-Qur'an yang membahas makna ayat-ayat suci dan relevansinya dalam kehidupan sehari-hari.
+            </p>
+          </div>
+          <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400 flex items-center gap-1">
+              <i class="fas fa-clock text-amber-500 text-[10px]"></i> 18.00 WIB
+            </span>
+            <!-- <button type="button" class="font-bold text-amber-600 hover:text-amber-700 flex items-center gap-0.5 text-[11px]">
+              Detail <i class="fas fa-chevron-right text-[8px]"></i>
+            </button> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- KOTAK KECIL 3: SOSIAL (Santunan Yatim & Dhuafa Tahunan) -->
+      <div class="agenda-card group" data-category="sosial">
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-teal-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-3">
+              <div class="flex items-center gap-1.5">
+                <span class="text-base sm:text-lg font-extrabold text-teal-600 leading-none">1</span>
+                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">MUHARRAM</span>
+              </div>
+              <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-teal-50 text-teal-700 font-semibold text-[10px]">
+                Sosial
+              </span>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-slate-800 line-clamp-2 group-hover:text-teal-600 transition-colors leading-snug mb-1.5">
+              Santunan Yatim &amp; Dhuafa Tahunan
+            </h3>
+            <p class="text-[11px] text-slate-500 line-clamp-2 leading-relaxed mb-3">
+              Penyerahan uang tunai &amp; bantuan pendidikan dalam rangka menyambut Tahun Baru Islam 1 Muharram.
+            </p>
+          </div>
+          <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400 flex items-center gap-1">
+              <i class="fas fa-clock text-teal-500 text-[10px]"></i> 19:15 WIB
+            </span>
+            <!-- <button type="button" class="font-bold text-teal-600 hover:text-teal-700 flex items-center gap-0.5 text-[11px]">
+              Detail <i class="fas fa-chevron-right text-[8px]"></i>
+            </button> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- KOTAK KECIL 4: PROGRAM RUTIN TPA -->
+      <div class="agenda-card group" data-category="rutin">
+        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-emerald-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-3">
+              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">TIAP HARI</span>
+              <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-semibold text-[10px]">
+                Rutin
+              </span>
+            </div>
+            <h3 class="text-xs sm:text-sm font-bold text-slate-800 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug mb-1.5">
+              TPA An-Nuur (Anak-Anak)
+            </h3>
+            <p class="text-[11px] text-slate-500 line-clamp-2 leading-relaxed mb-3">
+              Pendidikan Al-Qur'an dan pembentukan karakter santri usia 4-12 tahun.
+            </p>
+          </div>
+          <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px]">
+            <span class="text-slate-400 flex items-center gap-1">
+              <i class="fas fa-clock text-emerald-500 text-[10px]"></i> 15:30 WIB
+            </span>
+            <!-- <button type="button" class="font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-0.5 text-[11px]">
+              Detail <i class="fas fa-chevron-right text-[8px]"></i>
+            </button> -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,752 @@
+<section class="py-16 lg:py-24 bg-slate-50/50 relative overflow-hidden" id="jadwal">
+  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-10">
+      <span class="inline-block px-3.5 py-1 bg-emerald-100/80 text-emerald-800 rounded-full text-xs font-semibold tracking-wide mb-3">
+        <i class="fas fa-clock mr-1.5"></i>Worship Schedule
+      </span>
+      <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-800 tracking-tight mb-2">
+        Jadwal Sholat Hari Ini
+      </h2>
+      <p class="text-slate-500 text-sm sm:text-base max-w-lg mx-auto">
+        Persiapkan diri Anda untuk menunaikan ibadah tepat waktu.
+      </p>
+    </div>
+
+    <!-- Main Container -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+      
+      <!-- Date Navigation Header (Bagian yang Diperbaiki) -->
+      <div class="bg-emerald-900 text-white px-5 py-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+        <div>
+          <p class="text-emerald-200/90 text-xs font-medium tracking-wide" id="hijri-date-2">28 Safar 1448 H</p>
+          <h3 class="text-white text-base sm:text-lg font-bold mt-0.5" id="current-date-2">Rabu, 12 Agustus 2026</h3>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div class="flex items-center gap-1.5 bg-black/20 p-1 rounded-full border border-white/10 backdrop-blur-sm self-stretch sm:self-auto justify-between sm:justify-start">
+          <button class="w-8 h-8 rounded-full hover:bg-white/15 text-emerald-100 flex items-center justify-center transition-all active:scale-95" id="prev-day" title="Hari Sebelumnya">
+            <i class="fas fa-chevron-left text-xs"></i>
+          </button>
+          
+          <span class="text-xs font-semibold px-3 text-emerald-100 select-none whitespace-nowrap">
+            Hari Ini
+          </span>
+          
+          <button class="w-8 h-8 rounded-full hover:bg-white/15 text-emerald-100 flex items-center justify-center transition-all active:scale-95" id="next-day" title="Hari Berikutnya">
+            <i class="fas fa-chevron-right text-xs"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Modern Minimalist List Layout -->
+<div class="p-2 space-y-1">
+  
+  <!-- Subuh -->
+  <div class="prayer-card group px-5 py-3.5 rounded-xl flex items-center justify-between hover:bg-emerald-50/40 transition-all cursor-pointer border border-transparent" data-prayer="subuh">
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 rounded-xl bg-emerald-100/80 text-emerald-700 flex items-center justify-center text-base group-hover:bg-emerald-600 group-hover:text-white transition-all">
+        <i class="fas fa-sun"></i>
+      </div>
+      <div>
+        <h4 class="text-slate-800 font-semibold text-base">Subuh</h4>
+        <p class="text-slate-400 text-xs">Fajr</p>
+      </div>
+    </div>
+    <div class="text-right">
+      <div class="flex items-baseline gap-1 justify-end">
+        <span class="text-xl sm:text-2xl font-bold text-slate-800 group-hover:text-emerald-700 transition-colors" id="schedule-time-subuh">04:32</span>
+        <span class="text-slate-400 text-xs font-medium">WIB</span>
+      </div>
+      <div class="w-24 h-1 bg-slate-100 rounded-full mt-1 overflow-hidden ml-auto">
+        <div class="h-full bg-emerald-500 rounded-full w-full transition-all duration-500" id="progress-subuh"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Dzuhur -->
+  <div class="prayer-card group px-5 py-3.5 rounded-xl flex items-center justify-between hover:bg-amber-50/40 transition-all cursor-pointer border border-transparent" data-prayer="dzuhur">
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 rounded-xl bg-amber-100/80 text-amber-700 flex items-center justify-center text-base group-hover:bg-amber-600 group-hover:text-white transition-all">
+        <i class="fas fa-sun"></i>
+      </div>
+      <div>
+        <h4 class="text-slate-800 font-semibold text-base">Dzuhur</h4>
+        <p class="text-slate-400 text-xs">Dhuhr</p>
+      </div>
+    </div>
+    <div class="text-right">
+      <div class="flex items-baseline gap-1 justify-end">
+        <span class="text-xl sm:text-2xl font-bold text-slate-800 group-hover:text-amber-700 transition-colors" id="schedule-time-dzuhur">11:52</span>
+        <span class="text-slate-400 text-xs font-medium">WIB</span>
+      </div>
+      <div class="w-24 h-1 bg-slate-100 rounded-full mt-1 overflow-hidden ml-auto">
+        <div class="h-full bg-amber-500 rounded-full w-full transition-all duration-500" id="progress-dzuhur"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Ashar -->
+  <div class="prayer-card group px-5 py-3.5 rounded-xl flex items-center justify-between hover:bg-teal-50/40 transition-all cursor-pointer border border-transparent" data-prayer="ashar">
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 rounded-xl bg-teal-100/80 text-teal-700 flex items-center justify-center text-base group-hover:bg-teal-600 group-hover:text-white transition-all">
+        <i class="fas fa-cloud-sun"></i>
+      </div>
+      <div>
+        <h4 class="text-slate-800 font-semibold text-base">Ashar</h4>
+        <p class="text-slate-400 text-xs">Asr</p>
+      </div>
+    </div>
+    <div class="text-right">
+      <div class="flex items-baseline gap-1 justify-end">
+        <span class="text-xl sm:text-2xl font-bold text-slate-800 group-hover:text-teal-700 transition-colors" id="schedule-time-ashar">15:18</span>
+        <span class="text-slate-400 text-xs font-medium">WIB</span>
+      </div>
+      <div class="w-24 h-1 bg-slate-100 rounded-full mt-1 overflow-hidden ml-auto">
+        <div class="h-full bg-teal-500 rounded-full w-full transition-all duration-500" id="progress-ashar"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Maghrib (Fix Icon: Diganti ke fa-cloud-moon agar ter-render sempurna di FontAwesome Free) -->
+  <div class="prayer-card group px-5 py-3.5 rounded-xl flex items-center justify-between hover:bg-orange-50/40 transition-all cursor-pointer border border-transparent" data-prayer="maghrib">
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 rounded-xl bg-orange-100/80 text-orange-700 flex items-center justify-center text-base group-hover:bg-orange-600 group-hover:text-white transition-all">
+        <i class="fas fa-cloud-moon"></i>
+      </div>
+      <div>
+        <h4 class="text-slate-800 font-semibold text-base">Maghrib</h4>
+        <p class="text-slate-400 text-xs">Maghrib</p>
+      </div>
+    </div>
+    <div class="text-right">
+      <div class="flex items-baseline gap-1 justify-end">
+        <span class="text-xl sm:text-2xl font-bold text-slate-800 group-hover:text-orange-700 transition-colors" id="schedule-time-maghrib">17:48</span>
+        <span class="text-slate-400 text-xs font-medium">WIB</span>
+      </div>
+      <div class="w-24 h-1 bg-slate-100 rounded-full mt-1 overflow-hidden ml-auto">
+        <div class="h-full bg-orange-500 rounded-full w-full transition-all duration-500" id="progress-maghrib"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Isya -->
+  <div class="prayer-card group px-5 py-3.5 rounded-xl flex items-center justify-between hover:bg-indigo-50/40 transition-all cursor-pointer border border-transparent" data-prayer="isya">
+    <div class="flex items-center gap-4">
+      <div class="w-10 h-10 rounded-xl bg-indigo-100/80 text-indigo-700 flex items-center justify-center text-base group-hover:bg-indigo-600 group-hover:text-white transition-all">
+        <i class="fas fa-moon"></i>
+      </div>
+      <div>
+        <h4 class="text-slate-800 font-semibold text-base">Isya</h4>
+        <p class="text-slate-400 text-xs">Isha</p>
+      </div>
+    </div>
+    <div class="text-right">
+      <div class="flex items-baseline gap-1 justify-end">
+        <span class="text-xl sm:text-2xl font-bold text-slate-800 group-hover:text-indigo-700 transition-colors" id="schedule-time-isya">18:58</span>
+        <span class="text-slate-400 text-xs font-medium">WIB</span>
+      </div>
+      <div class="w-24 h-1 bg-slate-100 rounded-full mt-1 overflow-hidden ml-auto">
+        <div class="h-full bg-indigo-500 rounded-full w-3/4 transition-all duration-500" id="progress-isya"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+      <!-- Notification Bar Footer -->
+      <!-- <div class="bg-slate-50 border-t border-slate-100 px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-8 h-8 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm">
+            <i class="fas fa-bell"></i>
+          </div>
+          <div>
+            <h4 class="text-slate-800 font-medium text-xs sm:text-sm">Pengingat Adzan</h4>
+            <p class="text-slate-400 text-[11px] hidden sm:block">Aktifkan notifikasi waktu sholat</p>
+          </div>
+        </div>
+        <label class="relative inline-flex items-center cursor-pointer">
+          <input class="sr-only peer" id="adzan-toggle" type="checkbox"/>
+          <div class="w-11 h-6 bg-slate-200 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-slate-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-600"></div>
+          <span class="ms-2.5 text-xs font-medium text-slate-600" id="adzan-status">Nonaktif</span>
+        </label>
+      </div>
+
+    </div>
+  </div> -->
+</section>
+
+<!-- SECTION JADWAL KHOTIB & BILAL JUMAT -->
+<section class="py-16 lg:py-24 bg-white relative overflow-hidden" id="khotib-jumat">
+  <div class="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-10">
+      <span class="inline-block px-3.5 py-1 bg-emerald-100/80 text-emerald-800 rounded-full text-xs font-semibold tracking-wide mb-3">
+        <i class="fas fa-user-tie mr-1.5"></i>Petugas Shalat Jumat 2026
+      </span>
+      <h2 class="text-xl sm:text-3xl lg:text-4xl font-bold text-slate-800 tracking-normal break-words leading-snug mb-2">
+        Jadwal Khotib &amp; Bilal Jumat
+      </h2>
+      <p class="text-slate-500 text-sm sm:text-base max-w-lg mx-auto">
+        Pengurus Takmir Masjid An-Nuur Asrikaton - Pakis, Malang.
+      </p>
+    </div>
+
+    <!-- Main Table Container -->
+    <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 overflow-hidden">
+      
+      <!-- Table Wrapper dengan Max-Height dan Scroll Vertikal -->
+     <div class="w-full overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+  <table class="w-full table-fixed text-left border-collapse">
+    <!-- HEADER TABEL -->
+    <thead class="bg-emerald-800 text-white text-[10px] sm:text-xs uppercase tracking-wider">
+      <tr>
+        <th class="py-2.5 px-1 sm:px-3 text-center w-[12%]">No</th>
+        <th class="py-2.5 px-1.5 sm:px-4 w-[33%]">Jumat / Tanggal</th>
+        <th class="py-2.5 px-1.5 sm:px-4 w-[30%]">Khotib</th>
+        <th class="py-2.5 px-1.5 sm:px-4 w-[25%]">Bilal</th>
+      </tr>
+    </thead>
+
+    <!-- ISI TABEL (FULL 52 MINGGU) -->
+    <tbody class="divide-y divide-slate-100 text-[11px] sm:text-sm text-slate-700">
+      
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">1.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          02 JANUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. DRS. MUH. IKHWAN.</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. ARI FATONI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">2.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          09 JANUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">GUS ABDUL FATTAH AL KARIM</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. WAHYU RIZKI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">3.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          16 JANUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. ABDUL JALAL</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. AHMAD HARUN</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">4.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          23 JANUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. MUHAMMAD MAHFUD</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. NUR SYAHRUR RAMADANI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">5.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          30 JANUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. M. JAKFAR SHODIQ</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. DEDIK WAHYUDI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">6.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          06 FEBRUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. M. SYAMSAT</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. FIYAN AMIRUL ISLAM</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">7.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          13 FEBRUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. H. DERAJAT SUSIONO</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. IBNU MUNDZIR</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">8.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          20 FEBRUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">HABIB ZAIN BIN ABDULLAH BA'ABUD</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. SUDARMANTO</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">9.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          27 FEBRUARI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. MUSTHOFA SIROJ</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. MUH. ZULFAN HILAL</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">10.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          06 MARET 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. AHMAD ABD. ROHMAN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. ARI FATONI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">11.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          13 MARET 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. M. ANAS</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. WAHYU RIZKI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">12.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          20 MARET 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. M. MANSUR</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. RUSDAN FIKRI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">13.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          27 MARET 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. MAHFUDZ HAMZAH</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. NUR SYAHRUR RAMADANI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">14.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          03 APRIL 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. ABDULLAH YAZID</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. DEDIK WAHYUDI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">15.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          10 APRIL 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. HUSNAN AL HAFID</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. FIYAN AMIRUL ISLAM</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">16.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          17 APRIL 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. DRS. AHMAD WASI'AN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. IBNU MUNDZIR</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">17.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          24 APRIL 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. AHMAD HARUN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. SUDARMANTO</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">18.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          01 MEI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. IMAM MASLUHI</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. MUH. ZULFAN HILAL</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">19.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          08 MEI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. ARIF SUFYAN SHAH</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. ARI FATONI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">20.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          15 MEI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. SAIFUL ARIFIN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. WAHYU RIZKI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">21.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          22 MEI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. MULANI</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. AHMAD HARUN</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">22.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          29 MEI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">GUS ABDUL FATTAH AL KARIM</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. NUR SYAHRUR RAMADANI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">23.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          05 JUNI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. ABDULLAH YAZID</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. DEDIK WAHYUDI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">24.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          12 JUNI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. MUH. IKHWAN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. FIYAN AMIRUL ISLAM</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">25.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          19 JUNI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. HARIS AL HISYAM</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. IBNU MUNDZIR</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">26.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          26 JUNI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. ARIF RAHMAN HAKIM</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. SUDARMANTO</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">27.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          03 JULI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. MULYADI</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. MUH. ZULFAN HILAL</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">28.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          10 JULI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. ABDUL JALAL</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. ARI FATONI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">29.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          17 JULI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. MUJI SLAMET</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. WAHYU RIZKI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">30.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          24 JULI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. H. DERAJAT SUSIONO</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. RUSDAN FIKRI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">31.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          31 JULI 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. MULANI</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. NUR SYAHRUR RAMADANI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">32.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          07 AGUSTUS 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. ASHIF RIDHO</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. DEDIK WAHYUDI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">33.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          14 AGUSTUS 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. DRS. AHMAD WASI'AN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. FIYAN AMIRUL ISLAM</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">34.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          21 AGUSTUS 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. SYAMSUL ARIFIN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. IBNU MUNDZIR</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">35.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          28 AGUSTUS 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. MUSTHOF SIROJ</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. SUDARMANTO</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">36.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          04 SEPTEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. AHMAD ABD. ROHMAN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. MUH. ZULFAN HILAL</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">37.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          11 SEPTEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">HABIB ZAIN BIN ABDULLAH BA'ABUD</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. ARI FATONI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">38.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          18 SEPTEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. ARIF SUFYAN SHAH</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. WAHYU RIZKI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">39.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          25 SEPTEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. MAFTHUL AMIN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. AHMAD HARUN</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">40.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          02 OKTOBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. HUSNAN AL HAFID</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. NUR SYAHRUR RAMADANI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">41.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          09 OKTOBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. SAIFUL ARIFIN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. DEDIK WAHYUDI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">42.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          16 OKTOBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. SYAMSUL ARIFIN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. FIYAN AMIRUL ISLAM</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">43.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          23 OKTOBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. IMAM MASLUHI</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. IBNU MUNDZIR</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">44.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          30 OKTOBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. MUH. HUSNAN (MWCNU PAKIS)</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. ARI FATONI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">45.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          06 NOVEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. H. ALFAN SALIM J 99</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. WAHYU RIZKI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">46.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          13 NOVEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. HARIS AL HISYAM</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. RUSDAN FIKRI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">47.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          20 NOVEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. M. MANSUR</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. NUR SYAHRUR RAMADANI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">48.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PON</span>
+          27 NOVEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. MAHFUDZ HAMZAH</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. DEDIK WAHYUDI</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">49.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">KLIWON</span>
+          04 DESEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. M. ABIDIN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. FIYAN AMIRUL ISLAM</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">50.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">PAHING</span>
+          11 DESEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">KH. H. MUH. IKHWAN</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. IBNU MUNDZIR</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">51.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">WAGE</span>
+          18 DESEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. M. ANAS</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. SUDARMANTO</td>
+      </tr>
+
+      <tr class="hover:bg-emerald-50/50 transition-colors">
+        <td class="py-2.5 px-1 text-center font-bold text-slate-400">52.</td>
+        <td class="py-2.5 px-1.5 font-bold text-emerald-800 break-words leading-tight">
+          <span class="block text-[9px] sm:text-xs font-medium text-slate-500 mb-0.5">LEGI</span>
+          25 DESEMBER 2026
+        </td>
+        <td class="py-2.5 px-1.5 font-semibold text-slate-800 break-words">UST. MULYADI</td>
+        <td class="py-2.5 px-1.5 text-slate-600 break-words">UST. MUH. ZULFAN HILAL</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<!-- CATATAN & KETENTUAN PENTING (NB) -->
+<div class="mt-4 p-4 rounded-xl border border-slate-200 bg-slate-50 text-xs text-slate-700 space-y-2">
+  <div class="flex items-center gap-2 text-emerald-800 font-bold mb-1">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 fill-emerald-800 shrink-0" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+    <span>Catatan & Ketentuan Penting (NB):</span>
+  </div>
+  <ul class="list-disc pl-5 space-y-1 text-slate-600 leading-relaxed">
+    <li><strong class="text-slate-700">PENGGANTI / BADAL KHOTIB:</strong> KH. M. MAHFUDZ, UST. SYAMSUL ARIFIN, UST. MUJI SLAMET.</li>
+    <li><strong class="text-slate-700">PENGGANTI / BADAL BILAL:</strong> UST. MUNDZIR, UST. FIYAN AMIRUL ISLAM, UST. SUDARMANTO.</li>
+    <li>KHOTIB/BILAL YANG BERHALANGAN MOHON MEMBERI TAHU TAKMIR SEHARI SEBELUMNYA.</li>
+    <li>MOHON KHOTIB HADIR 30 MENIT SEBELUM ADZAN PERTAMA, DURASI KHUTBAH KE 1 DAN KE 2 MAKSIMAL 15 MENIT.</li>
+  </ul>
+</div>
+</section>
