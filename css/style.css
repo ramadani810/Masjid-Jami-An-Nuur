@@ -269,8 +269,8 @@ select {
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.1),  /* Atas tipis 10% */
-        rgba(45, 65, 45, 0.5)   /* Bawah 50% */
+        rgba(255, 255, 255, 0.1),  /* Atas tipis 10% (angka 0.1 bisa diubah untuk transparansi atas) */
+        rgba(45, 65, 45, 0.5)   /* Bawah 50% (angka 0.5 bisa diubah untuk tingkat kegelapan bawah) */
     );
 }
 
