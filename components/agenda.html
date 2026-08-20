@@ -18,27 +18,27 @@
       </p>
     </div>
 
-    <!-- Filter Buttons (Dibuat Pas di Tengah / Center untuk Mobile & Desktop) -->
+    <!-- Filter Buttons -->
     <div class="flex items-center justify-center flex-wrap gap-2 mb-8 w-full pb-2 pt-1 px-1 scrollbar-none">
       
-      <!-- Tombol Semua (Tema Hijau/Emerald) -->
+      <!-- Tombol Semua -->
       <button type="button" class="filter-tab active shrink-0 px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-700 font-medium text-xs transition-all active:scale-95 whitespace-nowrap bg-white [&.active]:bg-emerald-700 [&.active]:text-white [&.active]:border-emerald-700" data-filter="all">
         <span class="pointer-events-none">Semua</span>
       </button>
 
-      <!-- Tombol Kajian (Tema Hijau/Emerald) -->
+      <!-- Tombol Kajian -->
       <button type="button" class="group filter-tab shrink-0 px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:border-emerald-500 hover:text-emerald-700 font-medium text-xs transition-all active:scale-95 flex items-center gap-1.5 whitespace-nowrap bg-white [&.active]:bg-emerald-700 [&.active]:text-white [&.active]:border-emerald-700" data-filter="kajian">
         <i class="fas fa-book-open text-emerald-600 group-[.active]:text-white pointer-events-none transition-colors"></i>
         <span class="pointer-events-none">Kajian</span>
       </button>
 
-      <!-- Tombol Jumat (Tema Cokelat/Amber) -->
+      <!-- Tombol Jumat -->
       <button type="button" class="group filter-tab shrink-0 px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:border-amber-500 hover:text-amber-700 font-medium text-xs transition-all active:scale-95 flex items-center gap-1.5 whitespace-nowrap bg-white [&.active]:bg-amber-600 [&.active]:text-white [&.active]:border-amber-600" data-filter="jumat">
         <i class="fas fa-mosque text-amber-600 group-[.active]:text-white pointer-events-none transition-colors"></i>
         <span class="pointer-events-none">Jumat</span>
       </button>
 
-      <!-- Tombol Sosial (Tema Tosca/Teal) -->
+      <!-- Tombol Sosial -->
       <button type="button" class="group filter-tab shrink-0 px-3.5 py-1.5 rounded-xl border border-slate-200 text-slate-700 hover:border-teal-500 hover:text-teal-700 font-medium text-xs transition-all active:scale-95 flex items-center gap-1.5 whitespace-nowrap bg-white [&.active]:bg-teal-600 [&.active]:text-white [&.active]:border-teal-600" data-filter="sosial">
         <i class="fas fa-hands-helping text-teal-600 group-[.active]:text-white pointer-events-none transition-colors"></i>
         <span class="pointer-events-none">Sosial</span>
@@ -47,16 +47,48 @@
     </div>
 
     <!-- Mini Cards Grid Container -->
-    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5 sm:gap-4 mb-10" id="agenda-grid">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10" id="agenda-grid">
       
-      <!-- KOTAK KECIL 1: KAJIAN & JUMAT 1 (Tafsir Jalalain) -->
+      <!-- AGENDA UTAMA/BESAR: PENGAJIAN KHUSUS 21 AGUSTUS 2026 -->
+      <div class="agenda-card group sm:col-span-2 lg:col-span-2" data-category="jumat kajian">
+        <div class="bg-gradient-to-br from-white via-amber-50/40 to-amber-100/40 rounded-3xl p-5 sm:p-6 border-2 border-amber-400 shadow-md hover:shadow-lg transition-all flex flex-col h-full justify-between relative overflow-hidden">
+          <div class="absolute -right-10 -top-10 w-28 h-28 bg-amber-400/20 rounded-full blur-xl pointer-events-none"></div>
+          <div>
+            <div class="flex items-center justify-between gap-2 mb-3">
+              <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500 text-emerald-950 font-extrabold text-xs shadow-sm">
+                <i class="fas fa-star text-[10px]"></i> AGENDA UTAMA &amp; TERBARU
+              </span>
+              <span class="inline-flex items-center px-2.5 py-1 rounded-lg bg-amber-100 text-amber-800 font-bold text-xs">
+                Jum'at Kliwon (21 Agustus 2026)
+              </span>
+            </div>
+            <h3 class="text-base sm:text-xl font-black text-slate-900 group-hover:text-amber-600 transition-colors leading-snug mb-2">
+              Pengajian Rutin Tafsir Jalalain
+            </h3>
+            <p class="text-xs sm:text-sm font-bold text-emerald-800 mb-2.5 flex items-center gap-1.5">
+              <i class="fas fa-chalkboard-teacher text-emerald-600"></i> Diasuh oleh: KH. Abdullah Yazid
+            </p>
+            <p class="text-xs sm:text-sm text-slate-600 leading-relaxed mb-4">
+              Mohon kehadiran seluruh Jamaah Masjid An-Nuur. Acara dilanjutkan dengan kajian Kitab Tafsir Jalalain dan santapan ramah tamah bersama.
+            </p>
+          </div>
+          <div class="pt-3.5 border-t border-amber-200/60 flex flex-wrap items-center justify-between text-xs font-semibold text-slate-700 gap-2">
+            <span class="flex items-center gap-1.5 text-amber-700">
+              <i class="fas fa-clock text-amber-500"></i> Ba'da Maghrib – Isya'
+            </span>
+            <span class="flex items-center gap-1.5 text-emerald-700">
+              <i class="fas fa-map-marker-alt text-emerald-600"></i> Masjid Jami' An-Nuur
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- KOTAK KECIL 1: KAJIAN RUTIN SENIN -->
       <div class="agenda-card group" data-category="kajian">
-        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-emerald-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-emerald-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
           <div>
             <div class="flex items-center justify-between gap-1 mb-3">
-              <div class="flex items-center gap-1.5">
-                <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">SETIAP SENIN</span>
-              </div>
+              <span class="text-xs font-extrabold text-emerald-700 uppercase tracking-wider">SETIAP SENIN</span>
               <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-emerald-50 text-emerald-700 font-semibold text-[10px]">
                 Kajian
               </span>
@@ -72,21 +104,16 @@
             <span class="text-slate-400 flex items-center gap-1">
               <i class="fas fa-clock text-amber-500 text-[10px]"></i> 18:00 WIB
             </span>
-            <!-- <button type="button" class="font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-0.5 text-[11px]">
-              Detail <i class="fas fa-chevron-right text-[8px]"></i>
-            </button> -->
           </div>
         </div>
       </div>
 
-      <!-- KOTAK KECIL 2: JUMAT 2 (jumatt kliwon) -->
+      <!-- KOTAK KECIL 2: JUMAT KLIWON BULANAN -->
       <div class="agenda-card group" data-category="jumat">
-        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-amber-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-amber-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
           <div>
             <div class="flex items-center justify-between gap-1 mb-3">
-              <div class="flex items-center gap-1.5">
-                <span class="text-xs font-extrabold text-amber-600 uppercase tracking-wider">SETIAP JUMAT KLIWON</span>
-              </div>
+              <span class="text-xs font-extrabold text-amber-600 uppercase tracking-wider">SETIAP JUMAT KLIWON</span>
               <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 font-semibold text-[10px]">
                 Jumat
               </span>
@@ -102,20 +129,17 @@
             <span class="text-slate-400 flex items-center gap-1">
               <i class="fas fa-clock text-amber-500 text-[10px]"></i> 18.00 WIB
             </span>
-            <!-- <button type="button" class="font-bold text-amber-600 hover:text-amber-700 flex items-center gap-0.5 text-[11px]">
-              Detail <i class="fas fa-chevron-right text-[8px]"></i>
-            </button> -->
           </div>
         </div>
       </div>
 
-      <!-- KOTAK KECIL 3: SOSIAL (Santunan Yatim & Dhuafa Tahunan) -->
+      <!-- KOTAK KECIL 3: SOSIAL (Santunan Yatim & Dhuafa) -->
       <div class="agenda-card group" data-category="sosial">
-        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-teal-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
+        <div class="bg-white rounded-2xl p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-teal-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
           <div>
             <div class="flex items-center justify-between gap-1 mb-3">
               <div class="flex items-center gap-1.5">
-                <span class="text-base sm:text-lg font-extrabold text-teal-600 leading-none">1</span>
+                <span class="text-base font-extrabold text-teal-600 leading-none">1</span>
                 <span class="text-[10px] font-bold text-slate-400 uppercase tracking-wider">MUHARRAM</span>
               </div>
               <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-teal-50 text-teal-700 font-semibold text-[10px]">
@@ -133,294 +157,225 @@
             <span class="text-slate-400 flex items-center gap-1">
               <i class="fas fa-clock text-teal-500 text-[10px]"></i> 19:15 WIB
             </span>
-            <!-- <button type="button" class="font-bold text-teal-600 hover:text-teal-700 flex items-center gap-0.5 text-[11px]">
-              Detail <i class="fas fa-chevron-right text-[8px]"></i>
-            </button> -->
           </div>
         </div>
       </div>
 
-      <!-- KOTAK KECIL 4: PROGRAM RUTIN TPA -->
-      <div class="agenda-card group" data-category="rutin">
-        <div class="bg-white rounded-2xl p-3.5 sm:p-4 border border-slate-200/80 shadow-xs hover:shadow-md hover:border-emerald-500/60 transition-all flex flex-col h-full justify-between relative overflow-hidden">
-          <div>
-            <div class="flex items-center justify-between gap-1 mb-3">
-              <span class="text-xs font-bold text-emerald-700 uppercase tracking-wider">TIAP HARI</span>
-              <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-slate-100 text-slate-600 font-semibold text-[10px]">
-                Rutin
-              </span>
+    </div>
+
+  </div>
+
+  <!-- SECTION STRUKTUR ORGANISASI -->
+  <section class="py-12 lg:py-24 bg-slate-50/90 relative overflow-hidden" id="struktur-organisasi">
+    <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Header Section -->
+      <div class="text-center mb-10 lg:mb-14">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-100/80 border border-emerald-200/60 text-emerald-800 rounded-full text-xs font-semibold mb-3 shadow-sm">
+          <i class="fas fa-sitemap text-emerald-600"></i>
+          <span>Kepengurusan</span>
+        </div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-2 tracking-tight">
+          Struktur Organisasi Takmir
+        </h2>
+        <p class="text-slate-600 text-xs sm:text-base max-w-xl mx-auto leading-relaxed">
+          Susunan pengurus Takmir Masjid Jami' An-Nuur Desa Asrikaton Pakis Malang.
+        </p>
+      </div>
+
+      <!-- Wrapper Struktur Vertikal -->
+      <div class="flex flex-col items-center w-full">
+
+        <!-- TINGKAT 1: MAJLIS TAHKIM & PENASEHAT -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-2">
+          <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+            <div class="flex items-center gap-2.5 mb-2">
+              <div class="w-8 h-8 rounded-xl bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
+                <i class="fas fa-users text-xs"></i>
+              </div>
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-emerald-800">Majelis Tahkim</h4>
             </div>
-            <h3 class="text-xs sm:text-sm font-bold text-slate-800 line-clamp-2 group-hover:text-emerald-700 transition-colors leading-snug mb-1.5">
-              TPA An-Nuur (Anak-Anak)
-            </h3>
-            <p class="text-[11px] text-slate-500 line-clamp-2 leading-relaxed mb-3">
-              Pendidikan Al-Qur'an dan pembentukan karakter santri usia 4-12 tahun.
+            <ul class="text-xs text-slate-600 space-y-1 pl-2 border-l-2 border-emerald-600/30">
+              <li>Pengurus Ranting NU &amp; MWC NU Pakis</li>
+              <li>PC DMI Kecamatan Pakis</li>
+              <li>Kepala Desa Asrikaton</li>
+            </ul>
+          </div>
+
+          <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 flex flex-col justify-between">
+            <div class="flex items-center gap-2.5 mb-2">
+              <div class="w-8 h-8 rounded-xl bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
+                <i class="fas fa-user-shield text-xs"></i>
+              </div>
+              <h4 class="text-xs font-extrabold uppercase tracking-wider text-emerald-800">Penasehat</h4>
+            </div>
+            <p class="text-xs text-slate-600 font-medium leading-relaxed">
+              H. Moch Irfan, H. Imron Rosyadi, H. Moh Mafhudh, H. Ivan Safi'i, Sam'ian, H. Rohman
             </p>
           </div>
-          <div class="pt-2.5 border-t border-slate-100 flex items-center justify-between text-[11px]">
-            <span class="text-slate-400 flex items-center gap-1">
-              <i class="fas fa-clock text-emerald-500 text-[10px]"></i> 15:30 WIB
-            </span>
-            <!-- <button type="button" class="font-bold text-emerald-700 hover:text-emerald-800 flex items-center gap-0.5 text-[11px]">
-              Detail <i class="fas fa-chevron-right text-[8px]"></i>
-            </button> -->
-          </div>
         </div>
-      </div>
 
-    </div>
+        <div class="w-0.5 h-6 bg-emerald-600/40"></div>
 
-  </div>
-
- <!-- SECTION STRUKTUR ORGANISASI (VERTIKAL BERJENJANG - TANPA SKROL SAMPING) -->
-<section
-  class="py-12 lg:py-24 bg-slate-50/90 relative overflow-hidden"
-  id="struktur-organisasi"
->
-  <div class="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-    
-    <!-- Header Section -->
-    <div class="text-center mb-10 lg:mb-14">
-      <div
-        class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-100/80 border border-emerald-200/60 text-emerald-800 rounded-full text-xs font-semibold mb-3 shadow-sm"
-      >
-        <i class="fas fa-sitemap text-emerald-600"></i>
-        <span>Kepengurusan</span>
-      </div>
-      <h2
-        class="text-2xl sm:text-4xl font-extrabold text-slate-900 mb-2 tracking-tight"
-      >
-        Struktur Organisasi Takmir
-      </h2>
-      <p
-        class="text-slate-600 text-xs sm:text-base max-w-xl mx-auto leading-relaxed"
-      >
-        Susunan pengurus Takmir Masjid Jami' An-Nuur Desa Asrikaton Pakis Malang.
-      </p>
-    </div>
-
-    <!-- Wrapper Struktur Vertikal -->
-    <div class="flex flex-col items-center w-full">
-
-      <!-- TINGKAT 1: MAJLIS TAHKIM & PENASEHAT -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full mb-2">
-        
-        <!-- Majelis Tahkim -->
-        <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 flex flex-col justify-between">
-          <div class="flex items-center gap-2.5 mb-2">
-            <div class="w-8 h-8 rounded-xl bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
-              <i class="fas fa-users text-xs"></i>
+        <!-- TINGKAT 2: KETUA UMUM -->
+        <div class="w-full max-w-md my-1">
+          <div class="bg-gradient-to-b from-emerald-700 to-emerald-800 text-white rounded-2xl p-4 shadow-md text-center border-2 border-emerald-600">
+            <div class="w-8 h-8 mx-auto rounded-xl bg-white/10 text-white flex items-center justify-center mb-1.5 shadow-inner">
+              <i class="fas fa-user-tie text-xs"></i>
             </div>
-            <h4 class="text-xs font-extrabold uppercase tracking-wider text-emerald-800">Majelis Tahkim</h4>
+            <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-200 block mb-0.5">Ketua Umum</span>
+            <h3 class="text-sm sm:text-base font-extrabold text-white">Drs. H. M. IKHWAN, M.Pd.I</h3>
           </div>
-          <ul class="text-xs text-slate-600 space-y-1 pl-2 border-l-2 border-emerald-600/30">
-            <li>Pengurus Ranting NU &amp; MWC NU Pakis</li>
-            <li>PC DMI Kecamatan Pakis</li>
-            <li>Kepala Desa Asrikaton</li>
-          </ul>
         </div>
 
-        <!-- Penasehat -->
-        <div class="bg-white rounded-2xl p-4 shadow-sm border border-slate-200/80 flex flex-col justify-between">
-          <div class="flex items-center gap-2.5 mb-2">
-            <div class="w-8 h-8 rounded-xl bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
-              <i class="fas fa-user-shield text-xs"></i>
+        <div class="w-0.5 h-6 bg-emerald-600/40"></div>
+
+        <!-- TINGKAT 3: KETUA I, II, III -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full my-1">
+          <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 text-center flex flex-col items-center">
+            <div class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center mb-1 shadow-sm">
+              <i class="fas fa-mosque text-[11px]"></i>
             </div>
-            <h4 class="text-xs font-extrabold uppercase tracking-wider text-emerald-800">Penasehat</h4>
+            <span class="text-[10px] uppercase font-bold text-emerald-700">Ketua I (Imarah)</span>
+            <p class="text-xs font-bold text-slate-900 mt-0.5">SYAMSUL ARIFIN</p>
           </div>
-          <p class="text-xs text-slate-600 font-medium leading-relaxed">
-            H. Moch Irfan, H. Imron Rosyadi, H. Moh Mafhudh, H. Ivan Safi'i, Sam'ian, H. Rohman
-          </p>
-        </div>
 
-      </div>
-
-      <!-- Garis Penghubung -->
-      <div class="w-0.5 h-6 bg-emerald-600/40"></div>
-
-      <!-- TINGKAT 2: KETUA UMUM (Pusat) -->
-      <div class="w-full max-w-md my-1">
-        <div class="bg-gradient-to-b from-emerald-700 to-emerald-800 text-white rounded-2xl p-4 shadow-md text-center border-2 border-emerald-600">
-          <div class="w-8 h-8 mx-auto rounded-xl bg-white/10 text-white flex items-center justify-center mb-1.5 shadow-inner">
-            <i class="fas fa-user-tie text-xs"></i>
+          <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 text-center flex flex-col items-center">
+            <div class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center mb-1 shadow-sm">
+              <i class="fas fa-seedling text-[11px]"></i>
+            </div>
+            <span class="text-[10px] uppercase font-bold text-emerald-700">Ketua II (Riayah)</span>
+            <p class="text-xs font-bold text-slate-900 mt-0.5">H. KUSNADÍ</p>
           </div>
-          <span class="text-[10px] uppercase font-bold tracking-widest text-emerald-200 block mb-0.5">Ketua Umum</span>
-          <h3 class="text-sm sm:text-base font-extrabold text-white">Drs. H. M. IKHWAN, M.Pd.I</h3>
-        </div>
-      </div>
 
-      <!-- Garis Penghubung -->
-      <div class="w-0.5 h-6 bg-emerald-600/40"></div>
-
-      <!-- TINGKAT 3: KETUA I, II, III -->
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 w-full my-1">
-        
-        <!-- Ketua I -->
-        <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 text-center flex flex-col items-center">
-          <div class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center mb-1 shadow-sm">
-            <i class="fas fa-mosque text-[11px]"></i>
-          </div>
-          <span class="text-[10px] uppercase font-bold text-emerald-700">Ketua I (Imarah)</span>
-          <p class="text-xs font-bold text-slate-900 mt-0.5">SYAMSUL ARIFIN</p>
-        </div>
-
-        <!-- Ketua II -->
-        <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 text-center flex flex-col items-center">
-          <div class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center mb-1 shadow-sm">
-            <i class="fas fa-seedling text-[11px]"></i>
-          </div>
-          <span class="text-[10px] uppercase font-bold text-emerald-700">Ketua II (Riayah)</span>
-          <p class="text-xs font-bold text-slate-900 mt-0.5">H. KUSNADÍ</p>
-        </div>
-
-        <!-- Ketua III -->
-        <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 text-center flex flex-col items-center">
-          <div class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center mb-1 shadow-sm">
-            <i class="fas fa-clipboard-list text-[11px]"></i>
-          </div>
-          <span class="text-[10px] uppercase font-bold text-emerald-700">Ketua III (Idarah)</span>
-          <p class="text-xs font-bold text-slate-900 mt-0.5">MISDI</p>
-        </div>
-
-      </div>
-
-      <!-- Garis Penghubung -->
-      <div class="w-0.5 h-6 bg-emerald-600/40"></div>
-
-      <!-- TINGKAT 4: SEKRETARIS & BENDAHARA -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full my-1">
-        
-        <!-- Sekretaris -->
-        <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
-            <i class="fas fa-pen-nib text-xs"></i>
-          </div>
-          <div>
-            <span class="text-[10px] uppercase font-bold text-emerald-700">Sekretaris</span>
-            <p class="text-xs font-bold text-slate-900 mt-0.5">1. Achmad Ghozali, S.Pd.I<br>2. Saikhu Efendi</p>
+          <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 text-center flex flex-col items-center">
+            <div class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center mb-1 shadow-sm">
+              <i class="fas fa-clipboard-list text-[11px]"></i>
+            </div>
+            <span class="text-[10px] uppercase font-bold text-emerald-700">Ketua III (Idarah)</span>
+            <p class="text-xs font-bold text-slate-900 mt-0.5">MISDI</p>
           </div>
         </div>
 
-        <!-- Bendahara -->
-        <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 flex items-center gap-3">
-          <div class="w-8 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
-            <i class="fas fa-wallet text-xs"></i>
+        <div class="w-0.5 h-6 bg-emerald-600/40"></div>
+
+        <!-- TINGKAT 4: SEKRETARIS & BENDAHARA -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full my-1">
+          <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fas fa-pen-nib text-xs"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase font-bold text-emerald-700">Sekretaris</span>
+              <p class="text-xs font-bold text-slate-900 mt-0.5">1. Achmad Ghozali, S.Pd.I<br>2. Saikhu Efendi</p>
+            </div>
           </div>
-          <div>
-            <span class="text-[10px] uppercase font-bold text-emerald-700">Bendahara</span>
-            <p class="text-xs font-bold text-slate-900 mt-0.5">1. San Hadi<br>2. Agus Suprianto</p>
+
+          <div class="bg-white rounded-xl p-3.5 shadow-sm border border-slate-200/80 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-emerald-700 text-white flex items-center justify-center shrink-0 shadow-sm">
+              <i class="fas fa-wallet text-xs"></i>
+            </div>
+            <div>
+              <span class="text-[10px] uppercase font-bold text-emerald-700">Bendahara</span>
+              <p class="text-xs font-bold text-slate-900 mt-0.5">1. San Hadi<br>2. Agus Suprianto</p>
+            </div>
           </div>
         </div>
 
-      </div>
+        <div class="w-full my-6 relative flex items-center justify-center">
+          <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-dashed border-emerald-300"></div></div>
+          <span class="relative px-3 bg-slate-50 text-[11px] uppercase font-extrabold text-emerald-800 tracking-wider">
+            Bidang-Bidang Pelaksana
+          </span>
+        </div>
 
-      <!-- Garis Pemisah Kategori -->
-      <div class="w-full my-6 relative flex items-center justify-center">
-        <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-dashed border-emerald-300"></div></div>
-        <span class="relative px-3 bg-slate-50 text-[11px] uppercase font-extrabold text-emerald-800 tracking-wider">
-          Bidang-Bidang Pelaksana
-        </span>
-      </div>
-
-      <!-- TINGKAT 5: BIDANG-BIDANG PELAKSANA (List Clean Card) -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
-        
-        <!-- Pembangunan -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-tools text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Pembangunan &amp; Perawatan</h4>
+        <!-- TINGKAT 5: BIDANG PELAKSANA -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 w-full">
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-tools text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Pembangunan &amp; Perawatan</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">H. Misiadi, Sumanto, Abd Manan, Samsudin, Sadiono, Sungkiono, Ahmad Rifa'i, Sugiono</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">H. Misiadi, Sumanto, Abd Manan, Samsudin, Sadiono, Sungkiono, Ahmad Rifa'i, Sugiono</p>
-        </div>
 
-        <!-- Kebersihan & Keamanan -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-shield-alt text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Kebersihan &amp; Keamanan</h4>
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-shield-alt text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Kebersihan &amp; Keamanan</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">Sahlan, Mahfud, Kurniawan, Tomo, Karnoto, Wahyu Widayanto, Saikhu</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">Sahlan, Mahfud, Kurniawan, Tomo, Karnoto, Wahyu Widayanto, Saikhu</p>
-        </div>
 
-        <!-- Perpustakaan -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-book text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Perpustakaan</h4>
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-book text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Perpustakaan</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">H. Derajat, Sudarmanto, Yulistian Afandi, Munir</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">H. Derajat, Sudarmanto, Yulistian Afandi, Munir</p>
-        </div>
 
-        <!-- Ubudiyah -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-pray text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Ubudiyah</h4>
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-pray text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Ubudiyah</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">Haris Al Hisyam, Saiful, Khusni Tamrin, Heri Susanto</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">Haris Al Hisyam, Saiful, Khusni Tamrin, Heri Susanto</p>
-        </div>
 
-        <!-- Ta'lim & Pendidikan -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-graduation-cap text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Ta'lim &amp; Pendidikan</h4>
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-graduation-cap text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Ta'lim &amp; Pendidikan</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">Jakfar Shodik, Slamet Yuli, Ibnul Mundir, Agus Subekti, M.Pd.I</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">Jakfar Shodik, Slamet Yuli, Ibnul Mundir, Agus Subekti, M.Pd.I</p>
-        </div>
 
-        <!-- Kemuslimahan -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-female text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Kemuslimahan</h4>
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-female text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Kemuslimahan</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">Djuma'atin, Kholifah, Hj. Supiatin, Hj. Lilik Faridah, Istiqomah, Hj. Lulut Indayani</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">Djuma'atin, Kholifah, Hj. Supiatin, Hj. Lilik Faridah, Istiqomah, Hj. Lulut Indayani</p>
-        </div>
 
-        <!-- Remaja Masjid -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-user-friends text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Remaja Masjid</h4>
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-user-friends text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Remaja Masjid</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">Muji Slamet, Fiyan Amirul Islam, Fakhri Anwar Wijaya, Wahyu Rizqi Setiawan, M. Ari Fatoni, Athoul Huda</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">Muji Slamet, Fiyan Amirul Islam, Fakhri Anwar Wijaya, Wahyu Rizqi Setiawan, M. Ari Fatoni, Athoul Huda</p>
-        </div>
 
-        <!-- PHBI -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-calendar-alt text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Bidang PHBI</h4>
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-calendar-alt text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Bidang PHBI</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">Buasim, Sokhiful Mundir, Enggal Wiyono, Iswanto, Rofi'i</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">Buasim, Sokhiful Mundir, Enggal Wiyono, Iswanto, Rofi'i</p>
-        </div>
 
-        <!-- Humas -->
-        <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm sm:col-span-2">
-          <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
-            <i class="fas fa-bullhorn text-amber-600 text-xs"></i>
-            <h4 class="text-xs font-extrabold uppercase text-slate-900">Bidang Humas</h4>
+          <div class="bg-white border border-slate-200/80 rounded-xl p-3.5 shadow-sm sm:col-span-2">
+            <div class="flex items-center gap-2 mb-1.5 pb-1 border-b border-slate-100">
+              <i class="fas fa-bullhorn text-amber-600 text-xs"></i>
+              <h4 class="text-xs font-extrabold uppercase text-slate-900">Bidang Humas</h4>
+            </div>
+            <p class="text-[11px] text-slate-600 leading-relaxed">Masyhudi Purnomo, Urifan, Guntoro, Agung Feri, Umarul Fajar, Suwarno</p>
           </div>
-          <p class="text-[11px] text-slate-600 leading-relaxed">Masyhudi Purnomo, Urifan, Guntoro, Agung Feri, Umarul Fajar, Suwarno</p>
         </div>
 
-      </div>
+        <div class="w-0.5 h-6 bg-emerald-600/40 mt-2"></div>
 
-      <!-- Garis Penghubung Akhir -->
-      <div class="w-0.5 h-6 bg-emerald-600/40 mt-2"></div>
-
-      <!-- AKAR ORGANISASI: JAMA'AH -->
-      <div class="w-full max-w-xs mt-1">
-        <div class="bg-emerald-900 text-white rounded-xl py-2.5 px-4 text-center shadow-md border border-emerald-700">
-          <span class="text-[8px] uppercase font-extrabold tracking-widest text-emerald-300 block">Akar Organisasi</span>
-          <h3 class="text-xs font-black tracking-wider">JAMA'AH</h3>
+        <!-- AKAR ORGANISASI -->
+        <div class="w-full max-w-xs mt-1">
+          <div class="bg-emerald-900 text-white rounded-xl py-2.5 px-4 text-center shadow-md border border-emerald-700">
+            <span class="text-[8px] uppercase font-extrabold tracking-widest text-emerald-300 block">Akar Organisasi</span>
+            <h3 class="text-xs font-black tracking-wider">JAMA'AH</h3>
+          </div>
         </div>
+
       </div>
 
     </div>
-
-  </div>
-</section>
+  </section>
 </section>
