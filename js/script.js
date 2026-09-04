@@ -7,7 +7,7 @@
    1. Jam realtime WIB
    2. Tanggal Masehi
    3. Tanggal Hijriyah
-   4. Jadwal sholat Kabupaten Malang
+   4. Jadwal sholat Kabupaten Malang (Termasuk Imsak, Thulu', Dhuha)
    5. Navigasi jadwal:
       - Hari sebelumnya
       - Hari ini
@@ -281,6 +281,7 @@ function updateCountdown(now) {
     return;
   }
 
+  // Menentukan urutan countdown sholat fardhu
   const prayers = [
     { key: "subuh", name: "Subuh" },
     { key: "dzuhur", name: "Dzuhur" },
@@ -382,7 +383,8 @@ function resetPrayerCards() {
 ========================================================= */
 
 function showScheduleLoading() {
-  const prayers = ["subuh", "dzuhur", "ashar", "maghrib", "isya"];
+  // Ditambahkan imsak, terbit (thulu'), dan dhuha
+  const prayers = ["imsak", "subuh", "terbit", "dhuha", "dzuhur", "ashar", "maghrib", "isya"];
 
   prayers.forEach((prayer) => {
     const element = document.getElementById(`schedule-time-${prayer}`);
@@ -479,7 +481,11 @@ async function loadPrayerSchedule(dateString) {
 
     prayerSchedule = result.data.jadwal;
 
+    // Menampilkan Imsak, Subuh, Terbit (Thulu'), Dhuha, Dzuhur, Ashar, Maghrib, Isya
+    updatePrayerElement("imsak", prayerSchedule.imsak);
     updatePrayerElement("subuh", prayerSchedule.subuh);
+    updatePrayerElement("terbit", prayerSchedule.terbit);
+    updatePrayerElement("dhuha", prayerSchedule.dhuha);
     updatePrayerElement("dzuhur", prayerSchedule.dzuhur);
     updatePrayerElement("ashar", prayerSchedule.ashar);
     updatePrayerElement("maghrib", prayerSchedule.maghrib);
@@ -495,7 +501,7 @@ async function loadPrayerSchedule(dateString) {
   } catch (error) {
     console.error("Gagal mengambil jadwal sholat:", error);
 
-    const prayers = ["subuh", "dzuhur", "ashar", "maghrib", "isya"];
+    const prayers = ["imsak", "subuh", "terbit", "dhuha", "dzuhur", "ashar", "maghrib", "isya"];
 
     prayers.forEach((prayer) => {
       const element = document.getElementById(`schedule-time-${prayer}`);
@@ -507,14 +513,20 @@ async function loadPrayerSchedule(dateString) {
 
     if (isToday(dateString)) {
       prayerSchedule = {
+        imsak: "04:22",
         subuh: "04:32",
+        terbit: "05:45",
+        dhuha: "06:10",
         dzuhur: "11:52",
         ashar: "15:18",
         maghrib: "17:48",
         isya: "18:58",
       };
 
+      updatePrayerElement("imsak", prayerSchedule.imsak);
       updatePrayerElement("subuh", prayerSchedule.subuh);
+      updatePrayerElement("terbit", prayerSchedule.terbit);
+      updatePrayerElement("dhuha", prayerSchedule.dhuha);
       updatePrayerElement("dzuhur", prayerSchedule.dzuhur);
       updatePrayerElement("ashar", prayerSchedule.ashar);
       updatePrayerElement("maghrib", prayerSchedule.maghrib);
@@ -629,10 +641,7 @@ function setupMobileMenu() {
 }
 
 function setupActiveNavigation() {
-  // 1. Ambil SEMUA link: menu desktop, menu mobile, DAN menu di dalam dropdown
   const navLinks = document.querySelectorAll(".nav-link, .mobile-link, .group .absolute a");
-  
-  // Ambil tombol parent "Jadwal" agar warnanya bisa ikut berubah
   const dropdownParentBtn = document.querySelector(".group button");
 
   const targetIds = new Set();
@@ -657,21 +666,17 @@ function setupActiveNavigation() {
     navLinks.forEach((link) => {
       const isActive = link.getAttribute("href") === `#${id}`;
       
-      // Toggle status class 'active'
       link.classList.toggle("active", isActive);
 
-      // Manipulasi warna Tailwind secara manual
       if (isActive) {
         link.classList.add("text-amber-300");
         link.classList.remove("text-white", "text-emerald-100");
         
-        // Deteksi jika yang sedang aktif adalah menu di dalam dropdown
         if (link.closest('.group .absolute')) {
           isDropdownChildActive = true;
         }
       } else {
         link.classList.remove("text-amber-300");
-        // Kembalikan ke warna asli: emerald-100 untuk dropdown, white untuk sisanya
         if (link.closest('.group .absolute')) {
           link.classList.add("text-emerald-100");
         } else {
@@ -680,7 +685,6 @@ function setupActiveNavigation() {
       }
     });
 
-    // 2. Logika untuk membuat tombol induk "Jadwal" ikut menyala
     if (dropdownParentBtn) {
       if (isDropdownChildActive) {
         dropdownParentBtn.classList.add("text-amber-300");
@@ -781,7 +785,6 @@ const categoryBtns = document.querySelectorAll(".donation-category-btn");
 
 categoryBtns.forEach((button) => {
   button.addEventListener("click", function () {
-    // 1. Reset SEMUA tombol ke tampilan default/inactive
     categoryBtns.forEach((btn) => {
       btn.classList.remove(
         "active",
@@ -792,11 +795,9 @@ categoryBtns.forEach((button) => {
         "bg-amber-50/50",
         "bg-teal-50/50"
       );
-      // Buat border default abu-abu netral / transparan
       btn.classList.add("border-slate-200", "bg-white");
     });
 
-    // 2. Tambahkan class aktif & style khusus ke tombol yang sedang diklik
     this.classList.add("active");
     this.classList.remove("border-slate-200", "bg-white");
 
@@ -949,12 +950,10 @@ function setupAgendaFilter() {
 
   filterTabs.forEach((tab) => {
     tab.addEventListener("click", () => {
-      // 1. Reset semua tombol ke tampilan inactive (background putih, teks slate)
       filterTabs.forEach((t) => {
         t.classList.remove("active", "bg-emerald-700", "text-white");
         t.classList.add("bg-white", "text-slate-700");
 
-        // Kembalikan warna ikon tombol lain ke hijau
         const icon = t.querySelector("i");
         if (icon) {
           icon.classList.remove("text-white");
@@ -962,18 +961,15 @@ function setupAgendaFilter() {
         }
       });
 
-      // 2. Set tombol yang sedang diklik ke tampilan active (background emerald, teks putih)
       tab.classList.add("active", "bg-emerald-700", "text-white");
       tab.classList.remove("bg-white", "text-slate-700");
 
-      // Ubah warna ikon pada tombol aktif menjadi putih
       const activeIcon = tab.querySelector("i");
       if (activeIcon) {
         activeIcon.classList.remove("text-emerald-600");
         activeIcon.classList.add("text-white");
       }
 
-      // 3. Filter Card Agenda
       const filter = tab.dataset.filter;
 
       agendaCards.forEach((card) => {
@@ -1148,5 +1144,3 @@ document.addEventListener("click", function (event) {
     document.body.classList.add("overflow-hidden");
   }
 });
-
-
